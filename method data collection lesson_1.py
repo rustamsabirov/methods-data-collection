@@ -15,7 +15,7 @@ username = 'rustamsabirov' if username == '' else username
 url = 'https://api.github.com/users/'+username+'/repos'
 
 response = get_data(url)
-print('Получен результат')
+print('Получен результат:')
 print(response)
 
 repo = []
@@ -24,5 +24,5 @@ for itm in response:
 print(f'Список репозиториев пользователя {username}')
 print(repo)
 
-with open('1_1_repo.json', 'w') as f:
+with open('info_repo.json', 'w') as f:
     json_repo = json.dump(repo, f)
